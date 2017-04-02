@@ -1,18 +1,79 @@
-
-
+/* Fullpage js */
 .section{
-    font-size: 6em;
-    text-align: center;
+  text-align: center;
 }
 
+.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+  border-color: transparent rgba(51,64,36, .2);
+}
 
+.fp-controlArrow.fp-prev:hover, .fp-controlArrow.fp-next:hover {
+  border-color: transparent rgba(51,64,36, .5);
+}
+
+#fullpage, #section_2 {
+  background-color: #fcf9f1;
+}
+
+/* Timeline bar */
+#timeline {
+  color: #a6a69f;
+  font-size: 16px;
+  font-size: 3vw;
+}
+
+.era_active {
+  color: #334024;
+}
+
+/* Title / Header */
+.jeep_header {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.jeep_header h2 {
+  text-align: center;
+  font-size: 3vw;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.jeep_header h4{
+  text-align: center;
+  font-size: 2.5vw;
+  margin-top: 5px;
+}
+
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Jeep Image */
+.img-responsive {
+  display: block;
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+}
+
+.jeep_text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.5vw;
+}
+
+/* Font Slide-Down */
 div.slide-down {
   width:100%;
   overflow:hidden;
 }
-div.slide-down p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
+
+div.slide-down {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: black;
   animation: 5s slide-down;
   margin-top:0%;
   position: absolute;
@@ -21,9 +82,9 @@ div.slide-down p {
   font-size: 50px;
   text-align: center;
   padding-top: 20px;
-  margin-left: 45%;
+  margin-left: auto;
   margin-right: auto;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px white;
 }
 
 @keyframes slide-down {
@@ -38,9 +99,6 @@ div.slide-down p {
   }
 }
 
-
-
-
 /* CSS Document */
 body, html {
   height: 100%;
@@ -49,17 +107,17 @@ body, html {
 
 body {
 	background: rgb(209,228,234);
-background: -moz-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%, rgba(186,228,244,1) 100%);
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
-background: -o-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
-background: radial-gradient(ellipse at center,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1e4ea', endColorstr='#bae4f4',GradientType=1 );
-
-
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%, rgba(186,228,244,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
+  background: radial-gradient(ellipse at center,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1e4ea', endColorstr='#bae4f4',GradientType=1 );
 	padding:0;
 	margin:0;
 }
+
+/* Jeep CSS */
 .country-wrap {
 	position:relative;
 	width:100%;
@@ -153,61 +211,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1e4ea', end
 	border-radius:50%;
 	box-shadow:0 0 50px rgba(255,153,68,0.7);
 	position:absolute;
-	left:49%;
+	left:39%;
 	bottom:350px;
 }
-.tree-1 {
-	position:absolute;
-	z-index:2;
-	bottom:210px;
-	right:10px;
-	width:50px;
-	height:100px;
 
-}
-.trunk {
-	width:20%;
-	height:30%;
-	background:brown;
-}
-.branch {
-	position:abslute;
-	width:60%;
-	height:30%;
-	background:green;
-	-moz-transform:rotate(45deg);
-	border-radius:0 0 100% 0;
-}
-.branch-1 {
-	border:50px solid;
-	border-bottom:90px solid;
-	border-color:transparent transparent #a5894a transparent;
-	height: 0;
-	width: 0;
-	position:absolute;
-	left:-50px;
-	top:-70px;
-}
-.branch-2 {
-	border-bottom: 40px solid #9d8346;
-	border-left: 30px solid transparent;
-	border-right: 30px solid transparent;
-	height: 0;
-	width: 100px;
-	position:absolute;
-	top:60px;
-	left:-80px;
-}
-.branch-3 {
-	border-bottom: 50px solid #90713b;
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	height: 0;
-	width: 100px;
-	position:absolute;
-	top:100px;
-	left:-90px;
-}
 .mountain-1 {
 	background:#cea392;
 	width:500px;
@@ -392,9 +399,8 @@ to{-webkit-transform:rotate(0deg);}
 	content:'';
 	display:inline-block;
 	width:121px;
-	border-bottom: 1px solid #942b25;
-    border-right: 2px solid transparent;
-    height: 0;
+  border-right: 2px solid transparent;
+  height: 0;
 	z-index:2;
 	position:absolute;
 }
