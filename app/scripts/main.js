@@ -1,4 +1,13 @@
+// https://webdesign.tutsplus.com/articles/vertical-and-horizontal-scrolling-with-fullpagejs--cms-24215
 $(document).ready(function() {
+  $.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
 
   // variables
   var $header_top = $('.header-top');
@@ -11,7 +20,7 @@ $(document).ready(function() {
 
   // fullpage customization
   $('#fullpage').fullpage({
-    sectionsColor: ['#374140', '#B8AE9C'],
+    sectionsColor: ['#938b7c', '#B8AE9C'],
     sectionSelector: '.vertical-scrolling',
     slideSelector: '.horizontal-scrolling',
     navigation: true,
@@ -21,6 +30,8 @@ $(document).ready(function() {
     menu: '#menu',
 
     afterLoad: function(anchorLink, index) {
+
+
       $header_top.css('background', 'rgba(0, 47, 77, .3)');
       $nav.css('background', 'rgba(0, 47, 77, .25)');
       if (index == 2) {
@@ -40,9 +51,21 @@ $(document).ready(function() {
       if(index == 2) {
         $('#fp-nav').show();
       }
+
+
+
     },
 
     afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
+      if(anchorLink == 'secondSection') {
+        // Animate the information onto the screen.
+        // Need to check when it leaves the horizontal
+        // Animate the information onto the screen.
+        $('.jeep_header').animateCss('slideInDown');
+        $('.jeep_text').animateCss('slideInUp');
+        $('.jeep_img').animateCss('slideInLeft');
+      }
+
       // if(anchorLink == 'secondSection' && slideIndex == 1) {
       //   $.fn.fullpage.setAllowScrolling(false, 'up');
       //   $header_top.css('background', 'transparent');
@@ -58,6 +81,8 @@ $(document).ready(function() {
       //     }
       //   );
       // }
+
+
     },
 
     onSlideLeave: function( anchorLink, index, slideIndex, direction) {
@@ -66,6 +91,15 @@ $(document).ready(function() {
         $header_top.css('background', 'rgba(0, 47, 77, .3)');
         $nav.css('background', 'rgba(0, 47, 77, .25)');
       }
+
+
+      // if(anchorLink == 'secondSection') {
+      //   // Animate the information onto the screen.
+      //   // Need to check when it leaves the horizontal
+      //   $(this).('.jeep_header').animateCss('slideOutUp');
+      //   $(this).('.jeep_text').animateCss('slideOutDown');
+      //   $(this).('.jeep_img').animateCss('slideOutLeft');
+      // }
     }
   });
 

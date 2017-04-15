@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -30,7 +31,7 @@
 
   <header id="full-nav">
     <div class="header-top clearfix">
-      <h1 class="l-left"><a href="#firstSection">Jeep History</a></h1>
+      <h1 class="l-left animated fadeInLeft"><a href="#firstSection">Jeep History</a></h1>
       <a class="l-right toggle-menu" href="#">
         <i></i>
         <i></i>
@@ -41,13 +42,22 @@
     <nav class="hide">
       <ul id="menu">
         <li data-menuanchor="firstSection">
-          <a href="#firstSection" title="First Section">Home<br/>Intro</a>
+          <a href="#firstSection" title="First Section">Home<br/>Intro<br/>Section</a>
         </li>
         <li data-menuanchor="secondSection">
           <a href="#secondSection" title="Second Section">1941-1945<br/>Willys</a>
         </li>
         <li data-menuanchor="secondSection/1">
-          <a href="#secondSection/1" title="Second Slide">Second Slide</a>
+          <a href="#secondSection/1" title="Second Slide">1945-1985<br/>CJ</a>
+        </li>
+        <li data-menuanchor="secondSection/2">
+          <a href="#secondSection/2" title="Second Slide">1987-1995<br/>YJ</a>
+        </li>
+        <li data-menuanchor="secondSection/3">
+          <a href="#secondSection/3" title="Second Slide">1997-2006<br/>TJ</a>
+        </li>
+        <li data-menuanchor="secondSection/4">
+          <a href="#secondSection/4" title="Second Slide">2007-2017<br/>JK</a>
         </li>
       </ul>
     </nav>
@@ -64,7 +74,7 @@
       <!--Jeep landing page -->
       <div class="country-wrap">
         <div class="sun"></div>
-        <div class="grass"></div>
+
         <div class="street">
           <div class="car">
 
@@ -114,10 +124,67 @@
 
 
     <section class="vertical-scrolling">
+      <!-- Willys -->
+      <div class="horizontal-scrolling">
+        <div class=jeep_header >
+          <h2> THE ORIGINAL </h2>
+          <h4> Willys </h4>
+        </div>
+
+        <div class="container jeep_img">
+          <img class="img-responsive" src="images/mb_1.png" alt="Willys Jeep" width="560" height="345">
+        </div>
+
+        <div class="container">
+          <p class="jeep_text">
+            Lorem ipsum dolor sit amet, ea nostrum laboramus has,
+            cu apeirian necessitatibus mel, id ius alia malorum quaestio.
+            Suas solum lucilius sed id, mutat altera id duo. An nec tale mazim ancillae.
+            Ne eum eruditi insolens principes. Cum at cibo hendrerit neglegentur,
+            at vix soleat volutpat assentior. Sed ne volumus legendos ullamcorper,
+            nam ea mucius eligendi pertinacia.
+          </p>
+        </div>
+      </div>
+
+      <!-- CJ -->
+      <div class="horizontal-scrolling">
+        <div class=jeep_header >
+          <h2> THE ORIGINAL </h2>
+          <h4> Willys </h4>
+        </div>
+
+        <div class="container jeep_img">
+          <img class="img-responsive" src="images/mb_1.png" alt="Willys Jeep" width="560" height="345">
+        </div>
+
+        <div class="container">
+          <p class="jeep_text">
+            Lorem ipsum dolor sit amet, ea nostrum laboramus has,
+            cu apeirian necessitatibus mel, id ius alia malorum quaestio.
+            Suas solum lucilius sed id, mutat altera id duo. An nec tale mazim ancillae.
+            Ne eum eruditi insolens principes. Cum at cibo hendrerit neglegentur,
+            at vix soleat volutpat assentior. Sed ne volumus legendos ullamcorper,
+            nam ea mucius eligendi pertinacia.
+          </p>
+        </div>
+      </div>
+
+      <!-- YJ -->
       <div class="horizontal-scrolling">
         <h2>fullPage.js</h2>
-        <h3>This is the fifth section and it contains the first slide (actually section == first slide)</h3>
+        <h3>This is the second slide</h3>
+        <p class="end">Thank you!</p>
       </div>
+
+      <!-- TJ -->
+      <div class="horizontal-scrolling">
+        <h2>fullPage.js</h2>
+        <h3>This is the second slide</h3>
+        <p class="end">Thank you!</p>
+      </div>
+
+      <!-- JK -->
       <div class="horizontal-scrolling">
         <h2>fullPage.js</h2>
         <h3>This is the second slide</h3>
@@ -125,113 +192,6 @@
       </div>
     </section>
   </div>
-
-<!--
-    <div id="fullpage">
-
-      Jeep dropdown title
-      <div class="section">
-        <div class="slide-down">
-          Jeep History
-        </div>
-
-
-         Jeep landing page
-        <div class="country-wrap">
-          <div class="sun"></div>
-          <div class="grass"></div>
-          <div class="street">
-            <div class="car">
-
-            <div class="car-body">
-              <div class="car-top-back">
-                <div class="back-curve"></div>
-              </div>
-              <div class="car-gate"></div>
-              <div class="car-top-front">
-                <div class="wind-sheild"></div>
-              </div>
-              <div class="bonet-front"></div>
-              <div class="stepney"></div>
-            </div>
-
-            <div class="boundary-tyre-cover">
-              <div class="boundary-tyre-cover-back-bottom"></div>
-              <div class="boundary-tyre-cover-inner"></div>
-            </div>
-
-            <div class="tyre-cover-front">
-              <div class="boundary-tyre-cover-inner-front"></div>
-            </div>
-            <div class="base-axcel">
-
-            </div>
-            <div class="front-bumper"></div>
-            <div class="tyre">
-              <div class="gap"></div>
-            </div>
-            <div class="tyre front">
-              <div class="gap"></div>
-            </div>
-            <div class="car-shadow"></div>
-          </div>
-          </div>
-          <div class="street-stripe"></div>
-          <div class="hill">
-          </div>
-        </div>
-      </div>
-
-      <div class="section" id="section_2">
-          <div class="slide">
-            <div class="triangle-down"></div>
-            <div id="timeline">
-              <span class="era era_active">1941 - 1945 -></span>
-              <span class="era">1945 - 1985 -></span>
-              <span class="era">1987 - 1995 -></span>
-              <span class="era">1997 - 2006 -></span>
-              <span class="era">2007 - 2017 -></span>
-            </div>
-
-            <div class=jeep_header>
-              <h2> THE ORIGINAL </h2>
-              <h4> Willys </h4>
-            </div>
-
-            <div class="container">
-              <img class="img-responsive" src="images/mb_1.png" alt="Chania" width="560" height="345">
-            </div>
-
-            <div class="container">
-              <p class="jeep_text">
-                Lorem ipsum dolor sit amet, ea nostrum laboramus has,
-                cu apeirian necessitatibus mel, id ius alia malorum quaestio.
-                Suas solum lucilius sed id, mutat altera id duo. An nec tale mazim ancillae.
-                Ne eum eruditi insolens principes. Cum at cibo hendrerit neglegentur,
-                at vix soleat volutpat assentior. Sed ne volumus legendos ullamcorper,
-                nam ea mucius eligendi pertinacia.
-              </p>
-            </div>
-          </div>
-
-
-          <div class="slide">
-            <div id="timeline">
-              <span class="era">1941 - 1945 -></span>
-              <span class="era era_active">1945 - 1985 -></span>
-              <span class="era">1987 - 1995 -></span>
-              <span class="era">1997 - 2006 -></span>
-              <span class="era">2007 - 2017 -></span>
-            </div>
-          </div>
-
-          <div class="slide">Section 2 Slide 3
-          </div>
-      </div>
-    </div>
-
-  -->
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
