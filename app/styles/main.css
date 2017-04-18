@@ -7,7 +7,10 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 3vw;
-  padding-top: 50px;
+  margin-top: -20px;
+  position:static;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .jeep_header h2 {
@@ -41,7 +44,7 @@
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -15%;
+  /*margin-top: -15%;*/
 }
 
 .jeep_text {
@@ -52,7 +55,7 @@
 @media screen and (max-width: 1200px) {
   .img-responsive {
     width: 67%;
-    margin-top: -20%;
+    /*margin-top: -20%;*/
   }
   .jeep_text {
     font-size: 1.9vw;
@@ -62,7 +65,7 @@
 @media screen and (max-width: 767px) {
   .img-responsive {
     width: 100%;
-    margin-top: -25%;
+    /*margin-top: -25%;*/
   }
   .jeep_text {
     font-size: 2.5vw;

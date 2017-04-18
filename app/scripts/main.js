@@ -25,6 +25,7 @@ $(document).ready(function() {
     slideSelector: '.horizontal-scrolling',
     navigation: true,
     slidesNavigation: true,
+    scrollHorizontally: true,
     controlArrows: false,
     anchors: ['firstSection', 'secondSection'],
     menu: '#menu',
@@ -62,8 +63,8 @@ $(document).ready(function() {
         // Need to check when it leaves the horizontal
         // Animate the information onto the screen.
         $('.jeep_header').animateCss('slideInDown');
-        $('.jeep_text').animateCss('slideInUp');
-        $('.jeep_img').animateCss('slideInLeft');
+        $('.jeep_text').animateCss('slideInDown');
+        $('.jeep_img').animateCss('slideInDown');
       }
 
       // if(anchorLink == 'secondSection' && slideIndex == 1) {
