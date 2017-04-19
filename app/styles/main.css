@@ -81,7 +81,7 @@ div.slide-down {
 div.slide-down {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: black;
-  animation: 5s slide-down;
+  animation: 3s slide-down;
   margin-top:0%;
   position: absolute;
   text-align: center;
@@ -91,7 +91,6 @@ div.slide-down {
   padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 1px 1px white;
 }
 
 @keyframes slide-down {
@@ -104,6 +103,12 @@ div.slide-down {
     margin-top: 0%;
     height: 100%;
   }
+}
+
+.slide-down img {
+  width: 10%;
+  height: auto;
+  min-width: 100px;
 }
 
 /* CSS Document */
@@ -175,16 +180,6 @@ body {
 	box-shadow:200px 0 0 #d4d4d4, 400px 0 0 #d4d4d4 , 600px 0 0 #d4d4d4 , 800px 0 0 #d4d4d4 , 1000px 0 0 #d4d4d4 , 1200px 0 0 #d4d4d4 , 1400px 0 0 #d4d4d4 , 1600px 0 0 #d4d4d4 , 1800px 0 0 #d4d4d4 , 2000px 0 0 #d4d4d4;
 }
 
-.sun {
-	background:#ff9944;
-	width:60px;
-	height:60px;
-	border-radius:50%;
-	box-shadow:0 0 50px rgba(255,153,68,0.7);
-	position:absolute;
-	left:39%;
-	bottom:350px;
-}
 
 /*styles for car*/
 .car {
