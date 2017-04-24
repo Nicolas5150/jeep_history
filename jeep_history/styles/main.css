@@ -1,8 +1,16 @@
+.jeep_content {
+  font-size: 10px;
+}
 /* Title / Header */
 .jeep_header {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-align: center;
+  text-transform: uppercase;
   font-size: 3vw;
+  margin-top: -20px;
+  position:static;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .jeep_header h2 {
@@ -19,22 +27,49 @@
 }
 
 .container {
-  width: 95%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -1%;
+}
+
+/*Stop the first instance of table cell which is the jeep animation*/
+.fp-tableCell:not(:first-child) {
+  display: block;
 }
 
 /* Jeep Image */
 .img-responsive {
-  display: block;
-  max-width: 50%;
-  width: 50%;
+  width: 45%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-top: -15%;*/
 }
 
 .jeep_text {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .img-responsive {
+    width: 67%;
+    /*margin-top: -20%;*/
+  }
+  .jeep_text {
+    font-size: 1.9vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .img-responsive {
+    width: 100%;
+    /*margin-top: -25%;*/
+  }
+  .jeep_text {
+    font-size: 2.5vw;
+  }
 }
 
 /* Font Slide-Down */
@@ -46,7 +81,7 @@ div.slide-down {
 div.slide-down {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: black;
-  animation: 5s slide-down;
+  animation: 3s slide-down;
   margin-top:0%;
   position: absolute;
   text-align: center;
@@ -56,7 +91,6 @@ div.slide-down {
   padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 1px 1px white;
 }
 
 @keyframes slide-down {
@@ -69,6 +103,12 @@ div.slide-down {
     margin-top: 0%;
     height: 100%;
   }
+}
+
+.slide-down img {
+  width: 10%;
+  height: auto;
+  min-width: 100px;
 }
 
 /* CSS Document */
@@ -140,16 +180,6 @@ body {
 	box-shadow:200px 0 0 #d4d4d4, 400px 0 0 #d4d4d4 , 600px 0 0 #d4d4d4 , 800px 0 0 #d4d4d4 , 1000px 0 0 #d4d4d4 , 1200px 0 0 #d4d4d4 , 1400px 0 0 #d4d4d4 , 1600px 0 0 #d4d4d4 , 1800px 0 0 #d4d4d4 , 2000px 0 0 #d4d4d4;
 }
 
-.sun {
-	background:#ff9944;
-	width:60px;
-	height:60px;
-	border-radius:50%;
-	box-shadow:0 0 50px rgba(255,153,68,0.7);
-	position:absolute;
-	left:39%;
-	bottom:350px;
-}
 
 /*styles for car*/
 .car {
@@ -745,7 +775,6 @@ to{-webkit-transform:rotate(0deg);}
 	margin: 0;
 	padding: 0;
 	font-family: 'Alegreya Sans', Arial, sans-serif;
-	text-transform: uppercase;
 }
 
 html {
@@ -910,7 +939,6 @@ section {
 }
 
 h2 {
-	text-transform: lowercase;
 	font-size: 4em;
 	margin-bottom: 20px;
 }

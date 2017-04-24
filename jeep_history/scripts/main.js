@@ -30,6 +30,10 @@ $(document).ready(function () {
     controlArrows: false,
     anchors: ['firstSection', 'secondSection'],
     menu: '#menu',
+    easingcss3: 'ease',
+    scrollingSpeed: 700,
+    scrollBar: false,
+    lazyLoading: true,
 
     afterLoad: function afterLoad(anchorLink, index) {
 
@@ -47,39 +51,13 @@ $(document).ready(function () {
       }
     },
 
-    onLeave: function onLeave(index, nextIndex, direction) {
+    onLeave: function onLeave(anchorLink, index, nextIndex, direction) {
       if (index == 2) {
         $('#fp-nav').show();
       }
     },
 
-    afterSlideLoad: function afterSlideLoad(anchorLink, index, slideAnchor, slideIndex) {
-      if (anchorLink == 'secondSection') {
-        // Animate the information onto the screen.
-        // Need to check when it leaves the horizontal
-        // Animate the information onto the screen.
-        $('.jeep_header').animateCss('slideInDown');
-        $('.jeep_text').animateCss('slideInUp');
-        $('.jeep_img').animateCss('slideInLeft');
-      }
-
-      // if(anchorLink == 'secondSection' && slideIndex == 1) {
-      //   $.fn.fullpage.setAllowScrolling(false, 'up');
-      //   $header_top.css('background', 'transparent');
-      //   $nav.css('background', 'transparent');
-      //   $(this).css('background', '#374140');
-      //   $(this).find('h2').css('color', 'white');
-      //   $(this).find('h3').css('color', 'white');
-      //   $(this).find('p').css(
-      //     {
-      //       'color': '#DC3522',
-      //       'opacity': 1,
-      //       'transform': 'translateY(0)'
-      //     }
-      //   );
-      // }
-
-    },
+    afterSlideLoad: function afterSlideLoad(anchorLink, index, slideAnchor, slideIndex) {},
 
     onSlideLeave: function onSlideLeave(anchorLink, index, slideIndex, direction) {
       if (anchorLink == 'secondSection' && slideIndex == 1) {
@@ -88,13 +66,15 @@ $(document).ready(function () {
         $nav.css('background', 'rgba(0, 47, 77, .25)');
       }
 
-      // if(anchorLink == 'secondSection') {
-      //   // Animate the information onto the screen.
-      //   // Need to check when it leaves the horizontal
-      //   $(this).('.jeep_header').animateCss('slideOutUp');
-      //   $(this).('.jeep_text').animateCss('slideOutDown');
-      //   $(this).('.jeep_img').animateCss('slideOutLeft');
-      // }
+      if (anchorLink == 'secondSection') {
+
+        // Animate the information onto the screen.
+        // Need to check when it leaves the horizontal
+        // Animate the information onto the screen.
+        $('.jeep_header').animateCss('slideInLeft');
+        $('.jeep_text').animateCss('slideInUp');
+        $('.jeep_img').animateCss('slideInDown');
+      }
     }
   });
 });
