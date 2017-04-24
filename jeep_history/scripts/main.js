@@ -27,7 +27,7 @@ $(document).ready(function () {
     slideSelector: '.horizontal-scrolling',
     navigation: true,
     slidesNavigation: true,
-    controlArrows: false,
+    controlArrows: true,
     anchors: ['firstSection', 'secondSection'],
     menu: '#menu',
     easingcss3: 'ease',
@@ -73,7 +73,6 @@ $(document).ready(function () {
         // Animate the information onto the screen.
         $('.jeep_header').animateCss('slideInLeft');
         $('.jeep_text').animateCss('slideInUp');
-        $('.jeep_img').animateCss('slideInDown');
       }
     }
   });
